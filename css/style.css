@@ -13,27 +13,59 @@ html, body {
 }
 
 .main {
-  width: 375px;
   background: hsl(0, 0%, 100%);
   padding: 0 20px;
+  overflow: hidden;
+}
+.main .brown {
+  color: hsl(332, 51%, 32%);
+}
+.main hr {
+  margin: 30px auto;
+  width: 320px;
+  color: hsl(24, 5%, 18%);
+  opacity: 50%;
+}
+.main .time-item {
+  display: flex;
+  gap: 40px;
+}
+.main .time-item .dot {
+  height: 5px;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 5px;
+  background: hsl(332, 51%, 32%);
+  border-radius: 50%;
+}
+.main .time-item p {
+  margin-bottom: 5px;
+}
+.main .time-item p span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: hsl(24, 5%, 18%);
 }
 .main .img {
   top: 0;
   left: -20px;
-  background-image: url("/images/image-omelette.jpeg");
-  background-position: center;
+  background: url("/images/image-omelette.jpeg");
   background-size: cover;
+  width: 130%;
+  background-position: center;
   position: relative;
+  padding: 0;
+  margin: 0;
   height: 210px;
-  width: 375px;
   margin-bottom: 45px;
 }
 .main h1,
 .main h2 {
-  font-family: "Young Serif", serif;
   line-height: 2rem;
   font-size: 1.8rem;
   margin-bottom: 30px;
+  font-family: "Young Serif", serif;
   color: hsl(24, 5%, 18%);
   font-weight: 400;
 }
@@ -60,26 +92,50 @@ html, body {
   font-family: "Outfit", sans-serif;
   margin-bottom: 10px;
 }
-.main .time .time-item {
+.main .instructions .dot {
+  background: transparent;
+  color: hsl(332, 51%, 32%);
+  top: 0px;
+}
+.main .nutritions hr {
+  margin: -10px auto 10px auto;
+}
+.main .nutritions .nutrition-row {
   display: flex;
-  gap: 40px;
+  justify-content: flex-start;
 }
-.main .time .time-item .dot {
-  height: 5px;
-  position: relative;
-  top: 15px;
-  left: 10px;
-  width: 5px;
-  background: hsl(332, 51%, 32%);
-  border-radius: 50%;
-}
-.main .time .time-item p {
-  margin-bottom: 5px;
-}
-.main .time .time-item p span {
+.main .nutritions .nutrition-row .nutrition-row-1 {
   font-family: "Outfit", sans-serif;
-  font-weight: 700;
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+  margin-bottom: 20px;
+  width: 50%;
+  padding-left: 30px;
+}
+.main .nutritions .nutrition-row .nutrition-row-2 {
+  width: 50%;
+  color: hsl(332, 51%, 32%);
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  padding-left: 30px;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 0;
+  margin: 40px auto;
+  width: 100%;
+  background: transparent;
+  z-index: 1;
+  text-align: center;
+}
+.attribution a {
   color: hsl(24, 5%, 18%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  background: hsl(24, 5%, 18%);
+  color: hsl(330, 100%, 98%);
 }
 
 @media screen and (min-width: 1440px) {
@@ -99,6 +155,22 @@ html, body {
   }
   .main h1 {
     margin-bottom: 26px;
+  }
+  .main hr {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    margin: 10px auto;
+  }
+  .img {
+    border-radius: 15px;
   }
 }
 
