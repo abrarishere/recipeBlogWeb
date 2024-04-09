@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: hsl(30, 54%, 90%);
+  line-height: 1.5rem;
+}
+
+.main {
+  width: 375px;
+  background: hsl(0, 0%, 100%);
+  padding: 0 20px;
+}
+.main .img {
+  top: 0;
+  left: -20px;
+  background-image: url("/images/image-omelette.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 210px;
+  width: 375px;
+  margin-bottom: 45px;
+}
+.main h1,
+.main h2 {
+  font-family: "Young Serif", serif;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: hsl(24, 5%, 18%);
+  font-weight: 400;
+}
+.main p {
+  font-family: "Outfit", sans-serif;
+  color: hsl(30, 10%, 34%);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.main .time {
+  background: hsl(330, 100%, 98%);
+  height: 190px;
+  display: flex;
+  padding: 20px;
+  position: relative;
+  left: -10px;
+  margin: 20px 10px;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.main .time h3 {
+  color: hsl(332, 51%, 32%);
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 10px;
+}
+.main .time .time-item {
+  display: flex;
+  gap: 40px;
+}
+.main .time .time-item .dot {
+  height: 5px;
+  position: relative;
+  top: 15px;
+  left: 10px;
+  width: 5px;
+  background: hsl(332, 51%, 32%);
+  border-radius: 50%;
+}
+.main .time .time-item p {
+  margin-bottom: 5px;
+}
+.main .time .time-item p span {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  color: hsl(24, 5%, 18%);
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 26px;
+    border-radius: 20px;
+  }
+  .main .img {
+    width: 500px;
+    left: 0;
+    border-radius: 20px;
+  }
+  .main h1 {
+    margin-bottom: 26px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

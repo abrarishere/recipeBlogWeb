@@ -1,0 +1,99 @@
+@import 'config';
+
+.main {
+  width: 375px;
+  background: $white;
+  padding: 0 20px;
+
+  & .img {
+    top: 0;
+    left: -20px;
+    background-image: url('/images/image-omelette.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 210px;
+    width: 375px;
+    margin-bottom: 45px;
+  }
+  
+  & h1,
+  h2 {
+    font-family: "Young Serif", serif;
+    line-height: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: $darkcharcoal;
+    font-weight: 400;
+  }
+  
+  p {
+    font-family: 'Outfit', sans-serif;
+    color: $wengebrown;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .time {
+    background: $rosewhite;
+    height: 190px;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    left: -10px;
+    margin: 20px 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    & h3{
+      color: $darkraspberry;
+      font-weight: 600;
+      font-family: 'Outfit',sans-serif;
+      margin-bottom: 10px;
+    }
+    & .time-item{
+      display: flex;
+      gap: 40px;
+      & .dot{
+        height: 5px;
+        position: relative;
+        top: 15px;
+        left: 10px;
+        width: 5px;
+        background: $darkraspberry;
+        border-radius: 50%;
+      }
+      & p{
+        margin-bottom: 5px;
+        span{
+          font-family: 'Outfit', sans-serif;
+          font-weight: 700;
+          color: $darkcharcoal;
+        }
+      }
+      
+    }
+  }
+}
+
+
+@include media-lg {
+  .main {
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 26px;
+    border-radius: 20px;
+
+    & .img {
+      width: 500px;
+      left: 0;
+      border-radius: 20px;
+    }
+    
+    & h1 {
+      margin-bottom: 26px;
+    }
+  }
+}
